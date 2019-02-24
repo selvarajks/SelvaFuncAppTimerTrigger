@@ -15,7 +15,7 @@ namespace SelvaFuncTimerTrigger
         public static async Task Run(TimerInfo myTimer, ILogger log)
         {
 
-            log.LogInformation($"C# Selva Timer trigger function executed at: {DateTime.Now}");
+            log.LogInformation($"C# Selva Timer triggered function executed at: {DateTime.Now}");
 
             var client = new HttpClient();
             var resp = await client.GetAsync("https://selvafunctionapps.azurewebsites.net/api/RestApiCall?name=selva");
